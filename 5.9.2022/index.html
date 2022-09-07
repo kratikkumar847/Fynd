@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Tag</title>
+</head>
+<body>
+    <center><h1>A Tag Target in HTML</h1></center>
+    <br><br>
+    <hr><hr>
+    <center><span>Syntax</span> &#60;a target="_blank|_self|_parent|_top|framename"&#62;</center>
+    <ol>
+        <hr><hr>
+        <li>
+            _blank :-  Opens the linked document in a new window or tab
+            Example :- <a href="https://www.google.com/" target="_blank">Google</a>
+        </li>
+        <hr><hr>
+        <li>
+            _self :-  Opens the linked document in the same frame as it was clicked (this is default)
+            Example :- <a href="https://www.google.com/" target="_self">Google</a>
+        </li>
+        <hr><hr>
+        <li>
+           <p> _parent :-	Opens the linked document in the parent frame</p>
+            <iframe src="./Components/index1.html" height="200" width="300" title="Iframe Example">
+                
+            </iframe>
+            
+        </li>
+        <hr><hr>
+        <li>
+            <p>_top :-	Opens the linked document in the full body of the window</p>
+            <iframe src="./Components/index2.html" height="200" width="300" title="Iframe Example">
+                
+            </iframe>
+        </li>
+        <hr><hr>
+        <li>
+            <p>framename :-  Opens the linked document in the named iframe</p>
+            <iframe src="./Components/index4.html" name="target" height="200" width="300" title="Iframe Example">
+                
+            </iframe>
+            <a href="https://www.bing.com/" target="target">Bing</a>
+        </li>
+    </ol>
+</body>
+</html>
