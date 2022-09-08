@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
+
         .navbar {
             display: flex;
             align-items: center;
@@ -23,15 +24,15 @@
     <header style="background-color: orange; display: flex;">
         <h1>Uttarakhand Lovers</h1>
         <div class="navbar">
-            <a style="margin-right: 80px; color:white;" href="">Home</a>
-            <a style="margin-right: 80px; color:white;" href="">About</a>
-            <a style="margin-right: 80px; color:white;" href="">Site</a>
-            <a style="margin-right: 80px; color:white;" href="">Geoclimate</a>
-            <a style="margin-right: 80px; color:white;" href="">Managment</a>
-            <a style="margin-right: 80px; color:white;" href="">Contact</a>
+            <a style="margin-right: 80px; color:white;" href="#home">Home</a>
+            <a style="margin-right: 80px; color:white;" href="#about">About</a>
+            <a style="margin-right: 80px; color:white;" href="#site">Site</a>
+            <a style="margin-right: 80px; color:white;" href="#geo">Geoclimate</a>
+            <a style="margin-right: 80px; color:white;" href="#managment">Managment</a>
+            <a style="margin-right: 80px; color:white;" href="#contact">Contact</a>
         </div>
     </header>
-    <div style="background-color:black; height:100vh">
+    <div style="background-color:black; height:100vh" id="home">
         <center>
             <h1 style="color: white; font-size:50px; ">Welcome to Uttarakhand Beauty</h1>
         </center>
@@ -42,9 +43,9 @@
             <h1 style="color: orange; margin-top:100px; ">About</h1>
         </center>
         <div style="display: flex;">
-            <img style=" margin-left: 100px;margin-top:50px;"src="./image/download.jpg" alt="Photo">
-           <div style="color: white; margin-left: 200px; margin-top:50px">
-                <h1 >Vally of flowers National Park</h1>
+            <img style=" margin-left: 100px;margin-top:50px;" src="./image/download.jpg" alt="Photo">
+            <div style="color: white; margin-left: 200px; margin-top:50px">
+                <h1>Vally of flowers National Park</h1>
                 <pre style="margin-top: 50px;">
          Valley of Flowers National Park is an Indian 
          national park which was established in 1982. It 
@@ -52,29 +53,127 @@
          and is known for its meadows of endemic alpine 
          flowers and the variety of flora
                 </pre>
-           </div>
+            </div>
         </div>
     </div>
-    <div style="background-color: orange;">
-        <center><h1>Site of Vally Beauty</h1></center>
+    <div style="background-color: orange;" id="site">
+        <center>
+            <h1>Site of Vally Beauty</h1>
+        </center>
         <div style="margin-top: 100px">
-            <div  style="display: flex; justify-content:space-around">
+            <div style="display: flex; justify-content:space-around">
                 <img src="./image/image1.jpg" alt="image1" height="200px" width="300px">
                 <img src="./image/image2.jpg" alt="image1">
                 <img src="./image/image3.jpg" alt="image1">
             </div>
-            <div  style="display: flex; justify-content:space-around; margin-top: 50px">
+            <div style="display: flex; justify-content:space-around; margin-top: 50px">
                 <img src="./image/image4.jpg" alt="image1">
                 <img src="./image/image5.jpg" alt="image1">
                 <img src="./image/image6.jpg" alt="image1">
             </div>
-            <div  style="display: flex; justify-content:space-around; margin-top: 50px">
+            <div style="display: flex; justify-content:space-around; margin-top: 50px">
                 <img src="./image/image7.jpg" alt="image1">
                 <img src="./image/image8.jpg" alt="image1">
                 <img src="./image/image9.jpg" alt="image1">
             </div>
         </div>
     </div>
+    <div style="background-color: grey" id="geo">
+        <center>
+            <h1>Geoclimate of Uttarakhand</h1>
+        </center>
+        <div>
+            <img src="./image/image10.png" alt="image 10" height="250px" width="300px" style="margin-left: 250px">
+            <img src="image/image11.jpg" alt="image 11" height="250px" width="300px"
+                style="margin-left: 250px; margin-top:60px;">
+        </div>
+        <div style="display:flex; margin-top:60px; margin-left: 100px;">
+            <div style="width: 250px; margin-left:100px">
+                <center>
+                    <h2>Location</h2>
+                </center>
+                <center>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Eius, veritatis ratione?
+                        Voluptas, animi cupiditate amet dignissimos.
+                    </p>
+                </center>
+            </div>
+            <div style="width: 250px;  margin-left:100px">
+                <center>
+                    <h2>Geography</h2>
+                </center>
+                <center>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Eius, veritatis ratione?
+                        Voluptas, animi cupiditate amet dignissimos.
+                    </p>
+                </center>
+            </div>
+            <div style="width: 250px;  margin-left:100px">
+                <center>
+                    <h2>Climate</h2>
+                </center>
+                <center>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Eius, veritatis ratione?
+                        Voluptas, animi cupiditate amet dignissimos.
+                    </p>
+                </center>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: orange;" id="managment">
+        <center>
+            <h1>Conservation Managment</h1>
+        </center>
+        <div >
+            <img src="./image/image12.jpg" alt="image12" height="250px" width="300px" style="margin-left: 250px">
+            <img src="./image/image13.jpg" alt="image13" height="250px" width="300px" style="margin-left: 250px; margin-top: 100px;" >
+        </div>
+        <br><br><br>
+        <div style="margin-left: 100px; margin-right: 100px">
+            <ul>
+                <li>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, iste eligendi numquam dicta asperiores odit repudiandae harum vero quos libero veniam enim id nihil alias doloremque quia sunt? Voluptates corporis, commodi quae optio deleniti esse atque! Quas culpa accusantium quis sint. Odio reiciendis mollitia ullam corrupti eum. Ad, quae numquam.</p>
+                </li>
+                <br><br><br>
+                <li>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, iste eligendi numquam dicta asperiores odit repudiandae harum vero quos libero veniam enim id nihil alias doloremque quia sunt? Voluptates corporis, commodi quae optio deleniti esse atque! Quas culpa accusantium quis sint. Odio reiciendis mollitia ullam corrupti eum. Ad, quae numquam.</p>
+                </li>
+                <br><br><br>
+                <li>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, iste eligendi numquam dicta asperiores odit repudiandae harum vero quos libero veniam enim id nihil alias doloremque quia sunt? Voluptates corporis, commodi quae optio deleniti esse atque! Quas culpa accusantium quis sint. Odio reiciendis mollitia ullam corrupti eum. Ad, quae numquam.</p>
+                </li>
+                <br><br><br>
+                <li>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, iste eligendi numquam dicta asperiores odit repudiandae harum vero quos libero veniam enim id nihil alias doloremque quia sunt? Voluptates corporis, commodi quae optio deleniti esse atque! Quas culpa accusantium quis sint. Odio reiciendis mollitia ullam corrupti eum. Ad, quae numquam.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="background-color: black;" id="contact">
+        <center><h1 style="color: orange; ">Contact</h1></center>
+        <div style="display:flex; background-color: rgb(52, 36, 36); height:300px; width:500px; margin-left:450px; margin-top:150px;">
+            <form action="" style="color: white;">
+                <label for="name">Name : </label>
+                
+                <input type="text" width="100px" id="name"  style="margin-top: 70px; margin-left:150px;">
+                <br>
+                <label for="email">Email : </label>
+                <input type="email" width="100px" id="email"  style="margin-top: 30px; margin-left:150px;">
+                <br><br>
+                <label for="textarea">Message</label>
+                <textarea style=" margin-left:150px;" name="textarea" id="textarea" cols="40" rows="5" ></textarea>
+            </form>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
 </body>
 
 </html>
