@@ -1,0 +1,23 @@
+body {
+    background-image: url(./image.jpg);
+    background-size: cover;
+}
+
+.box {
+    width: 640px;
+    height: 400px;
+    margin: 50px auto;
+     color: yellow;
+    background-color: grey;
+    border: 40px solid yellow;
+    background-image: url(./image2.jpg);
+    background-origin: content-box;
+    background-size: cover; 
+    
+}
+
+.box p {
+   margin: 20px 0px 0px 0px;
+   font-family: 'Courier New', Courier, monospace;
+   float: left;
+}
