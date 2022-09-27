@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name : 'kratik',
+            age : 21,
+            place : 'khandwa',
+            hobbies : ['gym','books'],
+            living :{
+                val1: 'ad',
+                val2: 'vd'
+            },
+            salary:function(){
+                return 20000;
+            },
+            fullName : function(){
+                return this.name+' '+this.place;
+            }
+        }
+        console.log(person.fullName());
+    </script>
+</body>
+</html>

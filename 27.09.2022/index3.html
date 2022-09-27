@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events</h1>
+    <script>
+        document.addEventListener('keyup',(e)=>{
+            if(e.key=='u' || e.key=='U')
+            {
+                alert("hi Guys");
+            }
+            else if(e.ctrlKey && e.key=='s'){
+                e.preventDefault();
+                alert('see you');
+            }
+        })
+    </script>
+</body>
+</html>
