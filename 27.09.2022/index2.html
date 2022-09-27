@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="form">
+        <h1 id="h1">KeyEvents</h1>
+        <p>KeyDown</p>
+        <input type="text"  id="down">
+
+
+        <p>KeyUp</p>
+        <input type="text"  id="up">
+
+
+        <p>KeyPress</p>
+        <input type="text"  id="press">
+    </div>
+    <script>
+        let keyEvent1 = document.getElementById('down');
+        keyEvent1.addEventListener('keydown', ()=>{
+            //alert(this.value);
+            //document.getElementById('form').style.backgroundColor = this.value;
+        });
+        let keyEvent2 = document.getElementById('up');
+        keyEvent2.addEventListener('keyup', ()=>{
+            //alert(this.value);
+        });
+        let keyEvent3 = document.getElementById('press');
+        keyEvent3.addEventListener('keypress', ()=>{
+           // alert(this.value);
+           document.getElementById('form').style.backgroundColor = this.value;
+           console.log(this.value)
+        });
+        
+    </script>
+</body>
+</html>
