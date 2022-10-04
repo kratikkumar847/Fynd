@@ -1,0 +1,3 @@
+HomeWork
+
+1. Differnet ways to write Try and Catch

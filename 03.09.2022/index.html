@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handleing</title>
+</head>
+<body>
+    <h1>Exception Handling</h1>
+    <p id="demo"></p>
+    <script>
+        let a ="hello students";
+        document.getElementById('demo').innerHTML = a;
+        try {
+            show();
+        }catch(e){
+            console.log("The Error is...")
+            console.log(e);
+        }
+        
+        finally {
+            document.write('i am in finally');
+            // not in infinte loop
+            // 
+         }
+         document.write("I writing with dom");
+    </script>
+</body>
+</html>
