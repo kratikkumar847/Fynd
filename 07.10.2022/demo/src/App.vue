@@ -2,22 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <demoCom  message="This is 1st Component"/> 
+    <NewCompo LastName="Kumar"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import demoCom from './components/demoCom.vue'
-
-
+import NewCompo from './components/NewCompo.vue'
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    demoCom
-    
-}
+    NewCompo
+  }
 }
 </script>
 
