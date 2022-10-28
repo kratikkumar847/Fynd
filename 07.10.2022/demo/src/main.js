@@ -3,6 +3,7 @@ import App from './App.vue'
 import AboutComp from './components/AboutComp'
 import HomeComp from './components/HomeComp'
 import VueRouter from 'vue-router'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 Vue.use(VueRouter)
 const routes = [
