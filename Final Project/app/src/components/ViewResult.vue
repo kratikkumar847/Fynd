@@ -3,3 +3,8 @@
 </template>
 
 
+<script>
+    export default {
+        name : 'ViewResult'
+    }
+</script>
