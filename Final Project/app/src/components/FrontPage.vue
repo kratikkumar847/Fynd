@@ -5,13 +5,25 @@
     </div>
     <br><br><br>
     <div class="image">
-      <img src="../Images/CollegeLogo.jpg" alt="College Logo"  class="rounded mx-auto d-block" >
+      <img src="../images/CollegeLogo.jpg" alt="College Logo"  class="rounded mx-auto d-block" >
     </div>
     <br><br>
     <div class="items">
-      <p>Click here to <a href="#">Check Result</a></p>
-      <p>Click here to <a href="#">Faculty SignUp</a></p>
-      <p>Click here to <a href="#">Faculty Login</a> </p>
+      <p>Click Here to 
+        <router-link to="/ViewResult" >
+          Check Result
+        </router-link>
+      </p>
+      <p>Click Here to 
+        <router-link to="/FacultyLogin" >
+          Faculty Login
+        </router-link>
+      </p>
+      <p>Click Here to 
+        <router-link to="/FacultySignUp" >
+          Faculty SignUp
+        </router-link>
+      </p>
     </div>
   </div>
 </template>
