@@ -20,12 +20,18 @@ const router = new Router({
         {
            name: 'FacultyLogin',
            path: '/FacultyLogin',
-           component: FacultyLogin
+           component: FacultyLogin,
+           meta: {
+            requiresAuth: true
+           }
         },
         {
            name: 'FacultySignUp',
            path: '/FacultySignUp',
-           component: FacultySignUp
+           component: FacultySignUp,
+           meta: {
+            requiresAuth: true
+           }
         }
     ]
 });

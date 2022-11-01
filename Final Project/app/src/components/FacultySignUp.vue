@@ -6,13 +6,14 @@
           <div class="form-title">
             <h2 class="fw-bold mb-3">Create Your Account</h2>
           </div>
-          <form action="">
+          <form  @submit.prevent="register">
             <div class="form-floating mb-3">
               <input
                 type="name"
                 class="form-control form-control-sm"
                 placeholder="Enter Name"
                 id="floatingName"
+                v-model="register_form.name"
               />
               <label for="floatingName">Enter Name</label>
             </div>
@@ -22,6 +23,7 @@
                 class="form-control form-control-sm"
                 placeholder="Enter Email"
                 id="floatingEmail"
+                v-model="register_form.email"
               />
               <label for="floatingEmail">Enter Email</label>
             </div>
@@ -31,6 +33,7 @@
                 class="form-control form-control-sm"
                 placeholder="Enter College Name"
                 id="floatingCollege"
+                v-model="register_form.collegename"
               />
               <label for="floatingCollege">Enter College Name</label>
             </div>
@@ -40,6 +43,7 @@
                 class="form-control form-control-sm"
                 placeholder="Enter Password"
                 id="floatingPassword"
+                v-model="register_form.password"
               />
               <label for="floatingPassword">Enter Password</label>
             </div>
@@ -49,6 +53,7 @@
                 class="form-control form-control-sm"
                 placeholder="Confirm Password"
                 id="floatingConfirm"
+                v-model="register_form.confirmpassword"
               />
               <label for="floatingConfirm">Confirm Password</label>
             </div>
@@ -70,8 +75,28 @@
 
 
 <script>
+
+import { ref } from 'vue';
+import { useStore } from 'vuex';
+
+
+
 export default {
   name: "FacultySignUp",
+  setup() {
+    const register_form = ref({});
+    const store = useStore();
+
+    const register = () =>{
+      store.dispatch('register', register_form.value);
+    }
+
+    return {
+      register_form,
+      store,
+      register
+    }
+  }
 };
 </script>
 

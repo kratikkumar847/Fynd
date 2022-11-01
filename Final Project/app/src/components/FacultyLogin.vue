@@ -6,12 +6,13 @@
           <div class="form-title">
             <h2 class="fw-bold mb-3">Login</h2>
           </div>
-          <form action="">
+          <form  @submit.prevent="login">
             <div class="form-floating mb-3">
               <input
                 type="email"
                 class="form-control form-control-sm"
                 placeholder="Email"
+                v-model="login_form.email"
                 id="floatingInput"
               />
               <label for="floatingInput">Email</label>
@@ -22,6 +23,7 @@
                 class="form-control form-control-sm"
                 placeholder="Password"
                 id="floatingPassword"
+                v-model="login_form.password"
               />
               <label for="floatingPassword">Password</label>
             </div>
@@ -43,8 +45,25 @@
 
 
 <script>
+import { ref } from 'vue';
+import { useStore } from 'vuex';
+
 export default {
   name: "FacultyLogin",
+  setup() {
+    const login_form = ref({});
+    const store = useStore();
+
+    const login = () =>{
+      store.dispatch('login', login_form.value);
+    }
+
+    return {
+      login_form,
+      store,
+      login
+    }
+  }
 };
 </script>
 
