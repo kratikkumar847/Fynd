@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <NewCompo />
+    <img alt="Vue logo" src="./assets/logo.png">
+    <ProductsItem />
   </div>
 </template>
 
 <script>
-import NewCompo from './components/NewCompo.vue'
+import ProductsItem from './components/ProductsItem.vue'
 
 export default {
   name: 'App',
   components: {
-    NewCompo
+    ProductsItem
   }
 }
 </script>

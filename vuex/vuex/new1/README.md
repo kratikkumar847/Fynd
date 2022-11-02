@@ -1,4 +1,4 @@
-# vuex1
+# new1
 
 ## Project setup
 ```
