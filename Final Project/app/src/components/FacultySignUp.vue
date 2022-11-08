@@ -6,12 +6,13 @@
           <div class="form-title">
             <h2 class="fw-bold mb-3">Create Your Account</h2>
           </div>
-          <form action="">
+          <form id="signup-form" @submit.prevent="signupRequest">
             <div class="form-floating mb-3">
               <input
                 type="name"
                 class="form-control form-control-sm"
                 placeholder="Enter Name"
+                v-model="name"
                 id="floatingName"
               />
               <label for="floatingName">Enter Name</label>
@@ -22,6 +23,7 @@
                 class="form-control form-control-sm"
                 placeholder="Enter Email"
                 id="floatingEmail"
+                v-model="email"
               />
               <label for="floatingEmail">Enter Email</label>
             </div>
@@ -31,6 +33,7 @@
                 class="form-control form-control-sm"
                 placeholder="Enter College Name"
                 id="floatingCollege"
+                v-model="CollegeName"
               />
               <label for="floatingCollege">Enter College Name</label>
             </div>
@@ -40,6 +43,7 @@
                 class="form-control form-control-sm"
                 placeholder="Enter Password"
                 id="floatingPassword"
+                v-model="password"
               />
               <label for="floatingPassword">Enter Password</label>
             </div>
@@ -49,11 +53,16 @@
                 class="form-control form-control-sm"
                 placeholder="Confirm Password"
                 id="floatingConfirm"
+                v-model="ConfirmPassword"
               />
               <label for="floatingConfirm">Confirm Password</label>
             </div>
             <div class="mt-3">
-              <button class="btn primaryBg text-white">Submit</button>
+              <button class="btn primaryBg text-white" v-if="!xhrRequest">Submit</button>
+              <button class="btn primaryBg text-white" v-if="xhrRequest">
+                <span class="spinner-border spinner-border-sm "></span>
+                wait....
+              </button>
             </div>
           </form>
           <div class="mt-3">
@@ -70,8 +79,39 @@
 
 
 <script>
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
+
 export default {
   name: "FacultySignUp",
+  data(){
+    return {
+      name : '',
+      email: '',
+      CollegeName: '',
+      password : '',
+      ConfirmPassword: '',
+      xhrRequest : false
+    }
+  },
+  methods: {
+    signupRequest(){
+      console.log("in the porcess")
+      let v = this;
+      v.xhrRequest = true
+      firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
+        () => { 
+          this.$router.replace('FacultyLogin');
+        }, 
+        (err) =>{
+          v.xhrRequest = false;
+          alert(`Error - ${err.message}`);
+        }
+      );
+    }
+  },
 };
 </script>
 
@@ -90,6 +130,8 @@ body {
 .inner-row {
   height: 100vh;
 }
+
+
 
 .primaryBg {
   background: rgba(141, 194, 111, 1);

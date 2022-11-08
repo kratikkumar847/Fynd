@@ -1,0 +1,9 @@
+{
+      "name": "WAN_ATT",
+      "address": "25.43.18.1",
+      "status": "none",
+      "loss": "0.0 %",
+      "delay": "10.9 ms",
+      "stddev": "3.8 ms",
+      "status_translated": "Online"
+    }
