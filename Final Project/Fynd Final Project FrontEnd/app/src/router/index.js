@@ -3,11 +3,7 @@ import FrontPage from '../components/FrontPage.vue'
 import ViewResult from '../components/ViewResult.vue'
 import FacultyLogin from '../components/FacultyLogin.vue'
 import FacultySignUp from '../components/FacultySignUp.vue'
-import FacultyProfile from '../components/FacultyProfile.vue'
-
-import  firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+import FacultyHome from '../components/FacultyHome.vue'
 
 const router = new Router({
     mode: 'history',
@@ -33,22 +29,11 @@ const router = new Router({
            component: FacultySignUp
         },
         {
-           name: 'FacultyProfile',
-           path: '/FacultyProfile',
-           component: FacultyProfile,
-           meta : {
-            requiresAuth : true
-           }
+           name: 'FacultyHome',
+           path: '/FacultyHome',
+           component: FacultyHome
         }
     ]
-});
-
-router.beforeEach((to, from, next) => {
-   const authenticatedUser = firebase.auth().currentUser;
-   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-
-   if(requiresAuth && !authenticatedUser) next('FacultyProfile')
-   else next()
 });
 
 export default router;

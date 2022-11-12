@@ -6,13 +6,12 @@
           <div class="form-title">
             <h2 class="fw-bold mb-3">Login</h2>
           </div>
-          <form id="login-form" @submit.prevent="LoginUser">
+          <form action="">
             <div class="form-floating mb-3">
               <input
                 type="email"
                 class="form-control form-control-sm"
                 placeholder="Email"
-                v-model="email"
                 id="floatingInput"
               />
               <label for="floatingInput">Email</label>
@@ -22,16 +21,13 @@
                 type="password"
                 class="form-control form-control-sm"
                 placeholder="Password"
-                v-model="password"
                 id="floatingPassword"
               />
               <label for="floatingPassword">Password</label>
             </div>
             <div class="mt-3">
-              <button class="btn primaryBg text-white" v-if="!xhrRequest">Login</button>
-              <button class="btn primaryBg text-white" v-if="xhrRequest">
-                <span class="spinner-border spinner-border-sm "></span>
-                wait....
+              <button class="btn primaryBg text-white">
+                <router-link to="/FacultyHome">Login</router-link>
               </button>
             </div>
           </form>
@@ -49,36 +45,8 @@
 
 
 <script>
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
-
 export default {
   name: "FacultyLogin",
-  data(){
-    return {
-      email : '',
-      password : '',
-      xhrRequest : false
-    }
-  },
-  methods: {
-    LoginUser() {
-      let v = this;
-      v.xhrRequest = true;
-      firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
-        () => {
-          v.xhrRequest = false
-          alert("Logged in")
-          this.$router.replace('FacultyProfile');
-        },
-        (err) =>{
-          v.xhrRequest = false
-          alert(`Error - ${err.message}`);
-        }
-      )
-    }
-  },
 };
 </script>
 
